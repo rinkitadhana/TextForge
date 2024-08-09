@@ -766,6 +766,14 @@ video {
   padding-right: 1rem;
 }
 
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
+.pl-1\.5 {
+  padding-left: 0.375rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -831,6 +839,10 @@ video {
 
 .font-light {
   font-weight: 300;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .leading-tight {
