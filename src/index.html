@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="./output.css" rel="stylesheet" />
+    <title>Text-To-Speech</title>
+
+    <script src="../script.js" defer></script>
+  </head>
+  <body class="dark dark:bg-black dark:text-white">
+    <div class="flex justify-center mt-10">
+      <div class="md:w-3/5 w-[95%] flex flex-col gap-3">
+        <div>
+          <h1 class="text-4xl font-bold mb-6 text-center">TEXT TO SPEECH</h1>
+          <textarea
+            id="text"
+            class="w-full h-80 border-2 border-gray-500 rounded-xl dark:bg-zinc-700 md:p-5 p-2"
+          ></textarea>
+        </div>
+        <div class="flex flex-row gap-5">
+          <div>
+            <label for="speed" class="md:text-xl font-bold">Speed</label>
+            <input
+              type="number"
+              name="speed"
+              id="speed"
+              min="0.25"
+              max="4"
+              step="0.25"
+              value="1"
+              class="dark-bg-zinc-300 text-black rounded-lg md:p-1"
+            />
+          </div>
+          <div class="flex flex-row md:gap-4 gap-2 md:text-lg">
+            <button
+              id="play-button"
+              class="dark:bg-zinc-700 md:px-3 px-2 rounded-lg dark:hover:bg-zinc-500"
+            >
+              Play
+            </button>
+            <button
+              id="pause-button"
+              class="dark:bg-zinc-700 md:px-3 px-2 rounded-lg dark:hover:bg-zinc-500"
+            >
+              Pause
+            </button>
+            <button
+              id="stop-button"
+              class="dark:bg-zinc-700 md:px-3 px-2 rounded-lg dark:hover:bg-zinc-500"
+            >
+              Stop
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
