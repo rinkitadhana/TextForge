@@ -3,56 +3,106 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+    </style>
 
     <link href="./output.css" rel="stylesheet" />
     <title>Text-To-Speech</title>
 
     <script src="../script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body class="dark dark:bg-black dark:text-white">
     <div class="flex justify-center mt-10">
-      <div class="md:w-3/5 w-[95%] flex flex-col gap-3">
-        <div>
-          <h1 class="text-4xl font-bold mb-6 text-center">TEXT TO SPEECH</h1>
-          <textarea
-            id="text"
-            class="w-full h-80 border-2 border-gray-500 rounded-xl dark:bg-zinc-700 md:p-5 p-2"
-          ></textarea>
+      <div class="md:w-3/5 w-[95%]">
+        <div class="min-h-fit">
+          <div class="flex flex-row justify-between items-center px-2">
+            <div class="font-bold text-2xl md:text-3xl font-bricolage">
+              <i class="fa-solid fa-headphones-simple text-pink-500"></i>
+              Text to Speech
+            </div>
+            <div
+              class="py-1 px-2 rounded-lg cursor-pointer bg-zinc-700 hover:bg-zinc-500 font-semibold"
+            >
+              <i class="fa-solid fa-star text-yellow-400"></i>
+              on Github
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-5 mt-8">
+            <div
+              class="md:text-[60px] text-[40px] font-bricolage font-bold md:px-12 px-4 text-center leading-tight"
+            >
+              Bring your <span class="text-pink-500">words to life</span> with
+              this fun and easy
+              <span class="text-blue-500">Text-to-Speech</span> project!
+            </div>
+            <div
+              onclick="hideShow()"
+              id="click"
+              class="rounded-lg w-fit cursor-pointer px-3 py-2 bg-blue-500 hover:bg-blue-400 mt-6"
+            >
+              Generate
+              <i class="fa-solid fa-arrow-right font-light"></i>
+            </div>
+          </div>
+          <div id="speech" class="mt-10 hidden">
+            <div class="flex flex-col gap-3 md:mx-8">
+              <div>
+                <textarea
+                  id="text"
+                  placeholder="enter your text..."
+                  class="w-full h-80 border-2 border-gray-500 rounded-xl dark:bg-zinc-700 md:p-5 p-2"
+                ></textarea>
+              </div>
+              <div class="flex flex-row gap-5">
+                <div>
+                  <label for="speed" class="md:text-xl font-bold">Speed</label>
+                  <input
+                    type="number"
+                    name="speed"
+                    id="speed"
+                    min="0.25"
+                    max="4"
+                    step="0.25"
+                    value="1"
+                    class="dark-bg-zinc-300 text-black rounded-lg md:p-1"
+                  />
+                </div>
+                <div class="flex flex-row md:gap-4 gap-2 md:text-lg">
+                  <button
+                    id="play-button"
+                    class="dark:bg-zinc-700 md:px-3 px-2 rounded-lg dark:hover:bg-zinc-500"
+                  >
+                    Play
+                  </button>
+                  <button
+                    id="pause-button"
+                    class="dark:bg-zinc-700 md:px-3 px-2 rounded-lg dark:hover:bg-zinc-500"
+                  >
+                    Pause
+                  </button>
+                  <button
+                    id="stop-button"
+                    class="dark:bg-zinc-700 md:px-3 px-2 rounded-lg dark:hover:bg-zinc-500"
+                  >
+                    Stop
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="flex flex-row gap-5">
-          <div>
-            <label for="speed" class="md:text-xl font-bold">Speed</label>
-            <input
-              type="number"
-              name="speed"
-              id="speed"
-              min="0.25"
-              max="4"
-              step="0.25"
-              value="1"
-              class="dark-bg-zinc-300 text-black rounded-lg md:p-1"
-            />
-          </div>
-          <div class="flex flex-row md:gap-4 gap-2 md:text-lg">
-            <button
-              id="play-button"
-              class="dark:bg-zinc-700 md:px-3 px-2 rounded-lg dark:hover:bg-zinc-500"
-            >
-              Play
-            </button>
-            <button
-              id="pause-button"
-              class="dark:bg-zinc-700 md:px-3 px-2 rounded-lg dark:hover:bg-zinc-500"
-            >
-              Pause
-            </button>
-            <button
-              id="stop-button"
-              class="dark:bg-zinc-700 md:px-3 px-2 rounded-lg dark:hover:bg-zinc-500"
-            >
-              Stop
-            </button>
-          </div>
+        <div class="font-semibold mt-10 mb-5 flex flex-col items-center">
+          <div>Thank You for Visiting!</div>
+          <div>©2024 text-to-speech || All Rights Reserved</div>
+          <div>Made by <span class="text-pink-500">therinkit</span></div>
         </div>
       </div>
     </div>

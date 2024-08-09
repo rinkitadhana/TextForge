@@ -1,5 +1,15 @@
 {
   "devDependencies": {
     "tailwindcss": "^3.4.9"
-  }
+  },
+  "name": "tts",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
