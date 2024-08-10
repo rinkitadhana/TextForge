@@ -42,7 +42,7 @@ function stopText() {
 }
 
 var button = document.getElementById("speech");
-var click = document.getElementById("click");
+var generate = document.getElementById("click");
 
 button.style.display = "none";
 var display = 1;
@@ -50,5 +50,6 @@ var display = 1;
 function hideShow() {
   if (display == 1) {
     button.style.display = "block";
+    generate.style.cursor = "not-allowed";
   }
 }
