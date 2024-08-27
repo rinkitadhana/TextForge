@@ -6,6 +6,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
     </style>
+    <link rel="icon" type="image/x-icon" href="./img/TTS.png" />
 
     <link href="./output.css" rel="stylesheet" />
     <title>Text-To-Speech</title>
@@ -19,7 +20,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="dark dark:bg-black dark:text-white">
+  <body>
     <div class="flex justify-center mt-10">
       <div class="md:w-3/5 w-[95%]">
         <div class="min-h-fit">
@@ -28,15 +29,22 @@
               class="font-bold text-xl md:text-3xl font-bricolage flex flex-row gap-1 items-center"
             >
               <div>
-                <i class="fa-solid fa-headphones-simple text-pink-500"></i>
+                <i
+                  class="fa-regular fa-file text-pink-500 text-2xl md:text-3xl"
+                ></i>
               </div>
-              <div>Text to Speech</div>
+              Text
+              <div class="text-blue-500">to</div>
+              <span
+                class="bg-black/70 text-white rounded-md p-1 hover:scale-105 transition-transform delay-100"
+                >Speech</span
+              >
             </div>
             <a
               href="https://github.com/rinkitadhana/text-to-speech"
               target="_blank"
               ><div
-                class="py-1 px-2 rounded-lg text-sm md:text-base cursor-pointer bg-zinc-700 hover:bg-zinc-500 font-semibold flex flex-row gap-1 items-center"
+                class="py-2 px-2 rounded-lg cursor-pointer bg-black/50 zinc-700 text-white hover:bg-black/60 font-semibold flex flex-row gap-1 items-center"
               >
                 <div><i class="fa-solid fa-star text-yellow-400"></i></div>
                 <div>on Github</div>
@@ -45,7 +53,7 @@
           </div>
           <div class="flex flex-col items-center gap-5 mt-8 md:mt-16">
             <div
-              class="md:text-[60px] text-[40px] font-bricolage font-bold md:px-12 px-4 text-center leading-tight"
+              class="md:text-[3.4rem] px-2 text-[2.6rem] font-bricolage font-bold text-center leading-tight"
             >
               Bring your <span class="text-pink-500">words to life</span> with
               this fun and easy
@@ -55,10 +63,14 @@
             <div
               onclick="hideShow()"
               id="click"
-              class="rounded-lg w-fit cursor-pointer px-3 py-2 bg-blue-500 hover:bg-blue-400 mt-6 flex flex-row gap-1 items-center"
+              class="rounded-lg w-fit cursor-pointer px-3 py-2 group bg-blue-500 hover:bg-blue-400 text-white mt-6 flex flex-row gap-1 items-center"
             >
-              <div>Generate</div>
-              <div><i class="fa-solid fa-arrow-right font-light"></i></div>
+              <div>Create</div>
+              <div>
+                <i
+                  class="fa-solid fa-arrow-right font-light group-hover:-rotate-45 transition-transform delay-100"
+                ></i>
+              </div>
             </div>
           </div>
           <div id="speech" class="mt-10 hidden">
@@ -67,12 +79,14 @@
                 <textarea
                   id="text"
                   placeholder="enter your text..."
-                  class="w-full md:h-80 h-64 border-2 border-gray-500 rounded-xl dark:bg-zinc-700 md:p-5 p-2"
+                  class="w-full md:h-80 h-64 border-2 border-gray-400 rounded-xl md:p-5 p-2"
                 ></textarea>
               </div>
               <div class="flex flex-row md:gap-5 gap-3 items-center">
                 <div>
-                  <label for="speed" class="md:text-xl font-medium"
+                  <label
+                    for="speed"
+                    class="md:text-xl font-bricolage font-medium"
                     >Speed</label
                   >
                   <input
@@ -83,25 +97,25 @@
                     max="4"
                     step="0.25"
                     value="1"
-                    class="dark-bg-zinc-300 text-black rounded-lg md:p-1 pl-1.5"
+                    class="text-black border-2 border-gray-400 rounded-lg md:p-1 pl-1.5"
                   />
                 </div>
                 <div class="flex flex-row md:gap-4 gap-2 md:text-lg">
                   <button
                     id="play-button"
-                    class="dark:bg-zinc-700 md:px-3 px-2 py-1 rounded-lg dark:hover:bg-zinc-500"
+                    class="md:px-3 bg-black/15 hover:bg-black/10 px-2 py-1 rounded-lg"
                   >
                     Play
                   </button>
                   <button
                     id="pause-button"
-                    class="dark:bg-zinc-700 md:px-3 px-2 rounded-lg dark:hover:bg-zinc-500"
+                    class="md:px-3 bg-black/15 hover:bg-black/10 px-2 rounded-lg"
                   >
                     Pause
                   </button>
                   <button
                     id="stop-button"
-                    class="dark:bg-zinc-700 md:px-3 px-2 rounded-lg dark:hover:bg-zinc-500"
+                    class="md:px-3 bg-black/15 hover:bg-black/10 px-2 rounded-lg"
                   >
                     Stop
                   </button>
